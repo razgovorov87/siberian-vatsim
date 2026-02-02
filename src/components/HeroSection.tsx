@@ -150,6 +150,27 @@ export function HeroSection() {
               </Link>
             </Button>
           </div>
+
+          {/* Info Section */}
+          <div className="mt-16 w-full px-4 sm:px-6 lg:px-8 py-8 rounded-xl bg-primary/5 dark:bg-primary/10 border border-primary/20">
+            <p className="text-lg text-foreground leading-relaxed font-light">
+              {t('hero.webinfo')}{' '}
+              <a href="https://vatsim.net" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                <strong>VATSIM Siberia</strong>
+              </a>
+              {' '}{t('hero.webinfo2')}{' '}
+              <a href="https://vatrus.info" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                <strong>VATRUS</strong>
+              </a>
+              {', '}{t('hero.webinfo3')}{' '}
+              <a href="https://vatsim.net/docs/regions/emea" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                <strong>Middle East and Africa (EMEA)</strong>
+              </a>
+              {'. '}
+              <br />
+              {t('hero.welcomefly')}
+            </p>
+          </div>
         </div>
       </div>
 
