@@ -64,16 +64,18 @@ export function EventCard({
             <MapPin className="w-4 h-4 text-primary" />
             <span>{location}</span>
           </div>
-          <div className="flex items-center gap-3 text-muted-foreground text-sm">
-            <Users className="w-4 h-4 text-primary" />
-            <span>{participants} участников</span>
-          </div>
         </div>
 
         {!isPast && (
+          <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-3 text-muted-foreground text-sm">
+            <Users className="w-4 h-4 text-primary" />
+            <span>Ожидается {participants} участников</span>
+          </div>
           <Button variant="default" className="w-full">
-            {t('events.register')}
-          </Button>
+              {t('events.interesting')}
+            </Button>
+          </div>
         )}
       </div>
     </div>

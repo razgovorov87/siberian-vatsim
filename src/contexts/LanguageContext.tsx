@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 type Language = 'ru' | 'en';
 
@@ -18,10 +18,15 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.login': 'Войти',
     
     // Hero
-    'hero.title': 'VATSIM Сибирь',
-    'hero.subtitle': 'Добро пожаловать в виртуальное воздушное пространство Сибирского региона',
+    'hero.title': 'VATSIM Siberia',
+    'hero.subtitle': 'Виртуальный центр управления воздушным движением Сибири (VATSIB) в сети VATSIM.',
     'hero.cta': 'Присоединиться',
     'hero.events': 'Смотреть события',
+    'hero.webinfo': 'На этом сайте вы найдёте информацию о том, как стать диспетчером в нашем виртуальном центре, а также сведения о выполнении полётов в зоне РПИ UNNT, UNKL и UIII.',
+    'hero.webinfo2': 'является частью дивизиона',
+    'hero.webinfo3': 'который входит в',
+    'hero.vatsiminfo': 'VATSIM SIBERIA является частью дивизиона VATSIM Russia(VATRUS), который входит с Middle East and Africa (EMEA)',
+    'hero.welcomefly': 'Желаем приятных и безопасных полётов в воздушном пространстве Сибири!',
     
     // Stats
     'stats.pilots': 'Активных пилотов',
@@ -30,20 +35,20 @@ const translations: Record<Language, Record<string, string>> = {
     'stats.airports': 'Аэропортов',
     
     // Features
-    'features.title': 'Почему VATSIM Сибирь?',
+    'features.title': 'Почему VATSIM Siberia?',
     'features.realistic.title': 'Реалистичное управление',
     'features.realistic.desc': 'Профессиональные диспетчеры обеспечивают реалистичный опыт полётов',
     'features.community.title': 'Дружное сообщество',
     'features.community.desc': 'Присоединяйтесь к активному сообществу виртуальных авиаторов',
-    'features.events.title': 'Регулярные события',
+    'features.events.title': 'Регулярные мероприятия',
     'features.events.desc': 'Участвуйте в групповых полётах и специальных мероприятиях',
     
     // Events page
-    'events.title': 'Предстоящие события',
+    'events.title': 'Предстоящие события',  
     'events.subtitle': 'Присоединяйтесь к нашим мероприятиям и групповым полётам',
     'events.upcoming': 'Предстоящие',
     'events.past': 'Прошедшие',
-    'events.register': 'Зарегистрироваться',
+    'events.interesting': 'Интересно',
     'events.details': 'Подробнее',
     
     // Airports page
@@ -68,6 +73,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.contact': 'Контакты',
     'footer.discord': 'Discord',
     'footer.rights': 'Все права защищены',
+    'footer.privacy': 'Privacy Policy',
+    'footer.cookies': 'Cookies',
   },
   en: {
     // Navigation
@@ -82,6 +89,11 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.subtitle': 'Welcome to the virtual airspace of the Siberian region',
     'hero.cta': 'Join Now',
     'hero.events': 'View Events',
+    'hero.webinfo': 'On this website, you will find information on how to become a controller in our virtual center, as well as details about flying in the UNNT, UNKL, and UIII FIRs.',
+    'hero.webinfo2': 'is part of the division',
+    'hero.webinfo3': 'which belongs to the',
+    'hero.vatsiminfo': 'VATSIM SIBERIA is part of the VATSIM Russia (VATRUS) division, which belongs to the Middle East and Africa (EMEA)',
+    'hero.welcomefly': 'We wish you pleasant and safe flights in the Siberian airspace!',
     
     // Stats
     'stats.pilots': 'Active Pilots',
@@ -103,7 +115,7 @@ const translations: Record<Language, Record<string, string>> = {
     'events.subtitle': 'Join our events and group flights',
     'events.upcoming': 'Upcoming',
     'events.past': 'Past',
-    'events.register': 'Register',
+    'events.interesting': 'Interesting',
     'events.details': 'Details',
     
     // Airports page
@@ -128,6 +140,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.contact': 'Contact',
     'footer.discord': 'Discord',
     'footer.rights': 'All rights reserved',
+    'footer.privacy': 'Privacy Policy',
+    'footer.cookies': 'Cookies',
   },
 };
 
